@@ -287,8 +287,8 @@ struct Sytm
   int tm_wday;    /* day of week (Sunday = 0) */
   int tm_yday;    /* day of year (0 - 365) */
   int tm_isdst;   /* is summer time in effect? */
-  char *tm_zone;  /* abbreviation of timezone name */
-  long tm_gmtoff; /* offset from UTC in seconds */
+  char *__tm_zone;  /* abbreviation of timezone name */
+  long __tm_gmtoff; /* offset from UTC in seconds */
 };
 /* Convert a tm structure (struct tm *) found in <time.h> to a Sytm structure */
 #define STRUCT_TM_TO_SYTM(pTM, pSYTM) \
